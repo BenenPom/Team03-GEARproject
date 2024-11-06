@@ -5745,6 +5745,11 @@ PrefabInstance:
       propertyPath: rotationSpeed
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4355859398717703607, guid: 09ff88a08f03ae346bf3d1a11c4688d7,
+        type: 3}
+      propertyPath: rotationDirection.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4521593231891666519, guid: 09ff88a08f03ae346bf3d1a11c4688d7,
         type: 3}
       propertyPath: m_Name
