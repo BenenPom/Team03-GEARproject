@@ -8,6 +8,6 @@ public class RotateObject : MonoBehaviour
     void Update()
     {
         // Rotate the object around the specified axis at the specified speed
-        transform.Rotate(rotationDirection * rotationSpeed * Time.deltaTime);
+        transform.Rotate(rotationDirection * rotationSpeed * Time.deltaTime, Space.Self);
     }
 }
