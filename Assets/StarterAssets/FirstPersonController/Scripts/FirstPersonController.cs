@@ -95,7 +95,7 @@ namespace StarterAssets
 			}
 		}
 
-        private void Start()
+		private void Start()
 		{
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
@@ -108,28 +108,16 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
-        }
+		}
 
-        public LayerMask layerMask;
-        [SerializeField]
-        GameObject parent;
-
-        private void Update()
+		private void Update()
 		{
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+		}
 
-            if (Grounded)
-            {
-                RaycastHit hit;
-                Physics.Raycast(transform.position, transform.TransformDirection(transform.up * -1f), out hit, Mathf.Infinity, layerMask);
-                parent.gameObject.transform.parent = hit.transform;
-            }
-            else { parent.gameObject.transform.parent = null; }
-        }
-
-        private void LateUpdate()
+		private void LateUpdate()
 		{
 			CameraRotation();
 		}
